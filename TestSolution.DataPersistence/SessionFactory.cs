@@ -43,11 +43,9 @@ namespace TestSolution.DataPersistence
         private static List<Type> GetClassesFromNamespace()
         {
             Assembly ass = Assembly.GetExecutingAssembly();
-            var tps = ass.GetTypes();
             var types = ass.GetTypes()
                 .Where(type => type.Namespace == "TestSolution.Models.Mappings" && type.FullName.EndsWith("Map"))
                 .Select(type => type).ToList();
-
             return types;
         }
     }

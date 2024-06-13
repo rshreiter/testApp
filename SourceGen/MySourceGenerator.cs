@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using Microsoft.CodeAnalysis;
 
 namespace SourceGen
@@ -7,6 +8,8 @@ namespace SourceGen
     [Generator]
     public class MySourceGenerator : ISourceGenerator
     {
+       
+
         public void Execute(GeneratorExecutionContext context)
         {
             //var classNames = new List<string>() { "Class1", "Class2", "Class3" };
